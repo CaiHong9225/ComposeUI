@@ -18,7 +18,7 @@ import coil.annotation.ExperimentalCoilApi
 import coil.compose.ImagePainter
 import coil.compose.rememberImagePainter
 import coil.transform.RoundedCornersTransformation
-import com.wtt.ourcompose.R
+import com.wtt.compose.R
 
 @Preview(showBackground = true)
 @Composable

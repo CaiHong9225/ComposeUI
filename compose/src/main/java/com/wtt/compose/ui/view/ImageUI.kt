@@ -15,8 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.wtt.ourcompose.R
-import com.wtt.ourcompose.ui.TextUI
+import com.wtt.compose.R
 
 @Preview(showBackground = true)
 @Composable

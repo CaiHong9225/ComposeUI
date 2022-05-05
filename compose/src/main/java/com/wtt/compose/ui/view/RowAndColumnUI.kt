@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wtt.ourcompose.R
+import com.wtt.compose.R
 
 @Preview(showBackground = true)
 @Composable
@@ -40,7 +40,7 @@ fun RowAndColumnUI() {
                 .padding(all = 10.dp)
         ) {
             Image(
-                painter = painterResource(id = R.mipmap.apple),
+                painter = painterResource(id = R.mipmap.android),
                 contentDescription = null,
                 modifier = Modifier
                     .size(180.dp)
