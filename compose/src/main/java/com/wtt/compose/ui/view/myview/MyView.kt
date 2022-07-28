@@ -1,4 +1,4 @@
-package com.wtt.ourcompose.ui.view
+package com.wtt.compose.ui.view.myview
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

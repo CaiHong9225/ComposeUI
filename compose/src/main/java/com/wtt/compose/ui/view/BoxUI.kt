@@ -28,7 +28,6 @@ fun BoxUI() {
     ) {
         Text(
             text = "BoxLayout", modifier = Modifier
-                .size(width = 100.dp, height = 100.dp)
                 .background(Color.Green), textAlign = TextAlign.Center
         )
     }
