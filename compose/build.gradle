@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.wtt.compose"
-        minSdk 21
-        targetSdk 32
+        minSdk rootProject.ext.android.minSdkVersion
+        targetSdk rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -46,32 +46,15 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-rc01'
-    implementation "androidx.navigation:navigation-compose:2.4.0-alpha05"
-    implementation 'io.coil-kt:coil-compose:1.4.0'//图片加载框架
-    //选择添加
-    implementation("io.coil-kt:coil-gif:1.4.0")//支持GIF
-    implementation("io.coil-kt:coil-svg:1.4.0")//支持SVG
-    //Paging3
-    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
-    //这个有更多的Material风格的icon
-    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation rootProject.ext.compose
+    implementation rootProject.ext.coil
+    implementation rootProject.ext.androidXVaues
 
     implementation project(path: ':baselib')
-
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$rootProject.ext.dependVersion.compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$rootProject.ext.dependVersion.compose_version"
 }

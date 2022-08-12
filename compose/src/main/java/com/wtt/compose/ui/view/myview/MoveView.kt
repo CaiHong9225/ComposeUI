@@ -1,4 +1,4 @@
-package com.wtt.composetest.ui.view
+package com.wtt.compose.ui.view.myview
 
 import android.content.Context
 import android.util.AttributeSet

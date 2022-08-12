@@ -1,12 +1,10 @@
-package com.wtt.composetest.ui.view.behavior
+package com.wtt.compose.ui.view.myview.behavior
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import com.wtt.composetest.R
-import com.wtt.composetest.ui.view.MoveView
-import kotlin.random.Random
+import com.wtt.compose.R
 
 
 /**
@@ -15,7 +13,7 @@ import kotlin.random.Random
  * @descr
  */
 class ColorBehavior(val context: Context, attrs: AttributeSet?) :
-    CoordinatorLayout.Behavior<MoveView>(context, attrs) {
+    CoordinatorLayout.Behavior<com.wtt.compose.ui.view.myview.MoveView>(context, attrs) {
 
 
     companion object {
@@ -31,16 +29,16 @@ class ColorBehavior(val context: Context, attrs: AttributeSet?) :
      */
     override fun layoutDependsOn(
         parent: CoordinatorLayout,
-        child: MoveView,
+        child: com.wtt.compose.ui.view.myview.MoveView,
         dependency: View
     ): Boolean {
-        return dependency is MoveView
+        return dependency is com.wtt.compose.ui.view.myview.MoveView
     }
 
     // 改变当前的状
     override fun onDependentViewChanged(
         parent: CoordinatorLayout,
-        child: MoveView,
+        child: com.wtt.compose.ui.view.myview.MoveView,
         dependency: View
     ): Boolean {
         // 随机颜色

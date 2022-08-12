@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
 
-    <com.wtt.composetest.ui.view.MoveView
+    <com.wtt.compose.ui.view.myview.MoveView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -16,5 +16,5 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@color/purple_700"
-        app:layout_behavior=".ui.view.behavior.ColorBehavior" />
+        app:layout_behavior="com.wtt.compose.ui.view.myview.behavior.ColorBehavior" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
