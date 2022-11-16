@@ -1,0 +1,112 @@
+ext {
+    android = [
+            compileSdkVersion: 31,
+            minSdkVersion    : 21,
+            targetSdkVersion : 31
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion: "28.0.0",
+            espressoSdkVersion      : "3.0.2",
+            retrofitSdkVersion      : "2.9.0",
+            glideSdkVersion         : "4.8.0",
+            rxJava                  : "2.2.2",
+            rxAndroid               : "2.1.0",
+            rxKotlin                : "2.3.0",
+            anko                    : "0.10.7",
+            appcompat               : "1.3.1",
+            glide                   : "4.11.0",
+            room_version            : "2.3.0-alpha03",
+            okhttp                  : "4.9.0",
+            constraintlayoutVersion : "2.0.4",
+            cardviewVersion         : "1.0.0",
+            coroutinesVersion       : "1.5.2",
+            compose_version         : "1.1.0",
+            ktx_version             : "2.3.1"
+    ]
+
+    androidx = [
+            "appcompat"           : "androidx.appcompat:appcompat:${dependVersion.appcompat}",
+            "constraint-layout"   : "androidx.constraintlayout:constraintlayout:${dependVersion.constraintlayoutVersion}",
+            "lifecycle-extensions": "androidx.lifecycle:lifecycle-extensions:2.2.0",
+            "cardview"            : "androidx.cardview:cardview:${dependVersion.cardviewVersion}",
+    ]
+
+    retrofit = [
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${dependVersion.retrofitSdkVersion}",
+            "retrofitConverterGson"   : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofitSdkVersion}",
+            "retrofitAdapterRxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofitSdkVersion}",
+            "okhttp"                  : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
+            "okhttp3LoggerInterceptor": "com.squareup.okhttp3:logging-interceptor:${dependVersion.okhttp}",
+            "retrofitConverterMoshi"  : 'com.squareup.retrofit2:converter-moshi:2.4.0'
+    ]
+
+    rxJava = [
+            "rxJava"   : "io.reactivex.rxjava2:rxjava:${dependVersion.rxJava}",
+            "rxAndroid": "io.reactivex.rxjava2:rxandroid:${dependVersion.rxAndroid}",
+            "anko"     : "org.jetbrains.anko:anko:${dependVersion.anko}"
+    ]
+
+    commonDeps = [
+            "multidex"           : 'com.android.support:multidex:1.0.3',
+            "glide"              : "com.github.bumptech.glide:glide:${dependVersion.glide}",
+            "arouter"            : 'com.alibaba:arouter-api:1.5.1',
+            "jackson"            : "com.squareup.retrofit2:converter-jackson:2.3.0",
+            "umeng"              : 'com.umeng.umsdk:common:9.3.8',
+            "umeng_asms"         : 'com.umeng.umsdk:asms:1.2.2',
+            "nanohttpd"          : "org.nanohttpd:nanohttpd:2.3.1",
+            "nanohttpd_webserver": "org.nanohttpd:nanohttpd-webserver:2.3.1",
+            "zxing"              : "com.google.zxing:core:3.2.1",
+            "rxpermissions"      : 'com.github.tbruyelle:rxpermissions:0.10.2',
+            "bugly_java"         : "com.tencent.bugly:crashreport:2.8.6",
+            "bugly_native"       : "com.tencent.bugly:nativecrashreport:3.6.0",
+            "fastjson"           : "com.alibaba:fastjson:1.2.24",
+            "banner"             : "com.bigkoo:convenientbanner:2.0.5",
+            "lottie"             : "com.airbnb.android:lottie:5.0.2"
+    ]
+    commonUi = [
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4",
+            "flexbox"                      : "com.google.android:flexbox:2.0.1",
+            "autosize"                     : "me.jessyan:autosize:1.2.1",
+            "navigation_fragment"          : "androidx.navigation:navigation-fragment:2.3.5",
+            "navigation-ui"                : "androidx.navigation:navigation-ui:2.3.5",
+            "material"                     : "com.google.android.material:material:1.4.0"
+    ]
+    analyseLib = [
+            "leakcanary": "com.squareup.leakcanary:leakcanary-android:2.6"
+    ]
+    annotationProcessor = [
+            "glide"           : "com.github.bumptech.glide:compiler:${dependVersion.glide}",
+            "room"            : "androidx.room:room-compiler:${dependVersion.room_version}",
+            "arouter-compiler": 'com.alibaba:arouter-compiler:1.5.1'
+    ]
+    commondDB = [
+            "room-runtime": "androidx.room:room-runtime:${dependVersion.room_version}",
+            "room-rxjava2": "androidx.room:room-rxjava2:${dependVersion.room_version}"
+    ]
+    coroutines = [
+            "coroutines-android": "org.jetbrains.kotlinx:kotlinx-coroutines-android:${dependVersion.coroutinesVersion}",
+    ]
+    ktx = [
+            "androidx-core-ktx"      : "androidx.core:core-ktx:1.7.0",
+            "activity-ktx"           : "androidx.activity:activity-ktx:1.3.1",
+            "lifecycle-runtime-ktx"  : "androidx.lifecycle:lifecycle-runtime-ktx:${dependVersion.ktx_version}",
+            "lifecycle-viewmodel-ktx": "androidx.lifecycle:lifecycle-viewmodel-ktx:${dependVersion.ktx_version}",
+            "lifecycle-livedata-ktx" : "androidx.lifecycle:lifecycle-livedata-ktx:${dependVersion.ktx_version}",
+    ]
+    composeGo = [
+            "compose-ui"      : "androidx.compose.ui:ui:${dependVersion.compose_version}",
+            "compose-material": "androidx.compose.material:material:${dependVersion.compose_version}",
+            "compose-preview" : "androidx.compose.ui:ui-tooling-preview:${dependVersion.compose_version}",
+            "compose-activity": "androidx.activity:activity-compose:1.3.1",
+    ]
+    supportLibs = androidx.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    commonLibs = commonDeps.values()
+    uiLibs = commonUi.values()
+    dbLibs = commondDB.values()
+    coroutinesLibs = coroutines.values()
+    ktxLibs = ktx.values()
+    composeLibs = composeGo.values()
+}
