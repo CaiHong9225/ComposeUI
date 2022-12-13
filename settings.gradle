@@ -17,3 +17,4 @@ rootProject.name = "BaseProject"
 include ':app'
 include ':composeui'
 include ':baseLib'
+include ':baseui'
