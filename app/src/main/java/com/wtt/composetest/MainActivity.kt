@@ -26,5 +26,6 @@ class MainActivity : AppCompatActivity() {
                 Intent(this, SimpleInjectActivity::class.java)
             )
         }
+
     }
 }
